@@ -1,20 +1,19 @@
 services:
-  app:
-    image: library-management-system
-    build: .
-    ports:
-      - "8080:8080"
-    environment:
-      - SPRING_DATASOURCE_URL=jdbc:h2:mem:librarydb
-      - SPRING_DATASOURCE_USERNAME=admin
-      - SPRING_DATASOURCE_PASSWORD=password
-      - SPRING_H2_CONSOLE_ENABLED=true
-    depends_on:
-      - db
+  # app:
+  #   image: library-management-system
+  #   build: .
+  #   ports:
+  #     - "8080:8080"
+  #   environment:
+  #     - SPRING_DATASOURCE_URL=jdbc:h2:mem:librarydb
+  #     - SPRING_DATASOURCE_USERNAME=admin
+  #     - SPRING_DATASOURCE_PASSWORD=password
+  #     - SPRING_H2_CONSOLE_ENABLED=true
+  #   depends_on:
+  #     - db
 
   db:
-    image: h2database/h2
+    image: buildo/h2database
     ports:
-      - "1521:1521"
-    environment:
-      - H2_OPTIONS=-ifNotExists
+      - "9092:9092"
+      - "8082:8082"

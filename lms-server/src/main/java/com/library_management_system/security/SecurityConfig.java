@@ -15,8 +15,9 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/books/**").authenticated()
+            .csrf().disable().authorizeHttpRequests(auth -> auth
+                .requestMatchers("/api/users/register").permitAll()
+                .requestMatchers("/api/books/").authenticated()
                 .anyRequest().permitAll()
             )
             .httpBasic();
