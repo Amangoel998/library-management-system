@@ -1,7 +1,7 @@
 package com.library_management_system.service;
 
 import com.library_management_system.model.Book;
-import com.library_management_system.dto.BookDTO;
+import com.library_management_system.DTO.BookDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,5 +23,17 @@ public class BookService {
 
     public Book addBook(Book book) {
         return bookDTO.save(book);
+    }
+
+    public Book getBookById(Long id) {
+        return bookDTO.findById(id).orElse(null);
+    }
+
+    public void updateBookCopies(Long id, int copies) {
+        Book book = bookDTO.findById(id).orElse(null);
+        if (book != null) {
+            book.setCopies(copies);
+            bookDTO.save(book);
+        }
     }
 }

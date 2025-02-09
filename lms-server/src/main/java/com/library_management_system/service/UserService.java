@@ -1,7 +1,7 @@
 package com.library_management_system.service;
 
+import com.library_management_system.DTO.UserDTO;
 import com.library_management_system.model.User;
-import com.library_management_system.dto.UserDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -24,4 +24,5 @@ public class UserService {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userDTO.save(user);
     }
+
 }

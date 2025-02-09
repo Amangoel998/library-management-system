@@ -4,8 +4,9 @@ import { createRoot } from "react-dom/client";
 import { SideNavbar } from "./components/SideNavbar";
 import { Home } from "./components/Home";
 import { Login } from "./components/Login";
+import { UserContextProvider } from "./contexts/UserContext";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./main.css";
+import "./styles.css";
 
 const App: React.FC = () => {
   return (
@@ -14,11 +15,13 @@ const App: React.FC = () => {
         <h1>Library Management system</h1>
       </header>
       <Router>
-        <SideNavbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
+        <UserContextProvider>
+          <SideNavbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </UserContextProvider>
       </Router>
     </div>
   );

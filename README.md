@@ -27,3 +27,9 @@ Day 2:
   - home page
   - login page
   - Book cards
+
+Day 3
+- Added copies field sto the book.
+- Added Borrow record to the table.
+- Updated FE and BE to use borrow feature of a book by user.
+- Authenticated users can borrow the book unless there are atleast 1 copy of it.
