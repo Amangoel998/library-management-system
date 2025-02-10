@@ -1,6 +1,6 @@
 package com.library_management_system.service;
 
-import com.library_management_system.DTO.UserDTO;
+import com.library_management_system.dto.UserDTO;
 import com.library_management_system.model.User;
 
 import org.springframework.beans.factory.annotation.Autowired;

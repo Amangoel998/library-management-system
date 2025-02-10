@@ -7,7 +7,11 @@ export const getBooks = async (credentials) => {
     const response = await axios.get(`${API_BASE_URL}/api/books/`, {
       auth: credentials,
     });
-    return response.data;
+    if (response.status === 200) {
+      alert("Book fetched successfully!");
+      return response.data;
+    }
+    return [];
   } catch (e) {
     console.error(e);
   }
@@ -23,6 +27,7 @@ export const borrowBook = async (bookId: number, credentials) => {
       alert("Book borrowed successfully!");
       return response.data;
     }
+    return null;
   } catch (error) {
     console.error("Error borrowing book:", error);
   }

@@ -1,6 +1,6 @@
 package com.library_management_system.service;
 
-import com.library_management_system.DTO.BookDTO;
+import com.library_management_system.dto.BookDTO;
 import com.library_management_system.model.Book;
 
 import org.junit.jupiter.api.Test;

@@ -1,7 +1,7 @@
 package com.library_management_system.service;
 
+import com.library_management_system.dto.BookDTO;
 import com.library_management_system.model.Book;
-import com.library_management_system.DTO.BookDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

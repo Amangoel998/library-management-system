@@ -1,4 +1,4 @@
-package com.library_management_system.DTO;
+package com.library_management_system.dto;
 
 import com.library_management_system.model.Borrow;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -3,8 +3,8 @@ package com.library_management_system.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.library_management_system.DTO.BorrowDTO;
-import com.library_management_system.DTO.UserDTO;
+import com.library_management_system.dto.BorrowDTO;
+import com.library_management_system.dto.UserDTO;
 import com.library_management_system.model.Book;
 import com.library_management_system.model.Borrow;
 import com.library_management_system.model.User;

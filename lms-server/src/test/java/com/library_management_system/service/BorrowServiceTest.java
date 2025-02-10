@@ -8,8 +8,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.library_management_system.DTO.BorrowDTO;
-import com.library_management_system.DTO.UserDTO;
+import com.library_management_system.dto.BorrowDTO;
+import com.library_management_system.dto.UserDTO;
 import com.library_management_system.model.Book;
 import com.library_management_system.model.User;
 
